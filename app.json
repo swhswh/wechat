@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/myinfo/myinfo",
+    "pages/message/message",
+    "pages/courseware/courseware"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "sVIP",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "color":"#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"resources/images/icon_tabbar.png",
+        "selectedIconPath":"resources/images/icon_tabbar.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "resources/images/icon_tabbar.png",
+        "selectedIconPath": "resources/images/icon_tabbar.png", 
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "iconPath": "resources/images/icon_tabbar.png",
+        "selectedIconPath": "resources/images/icon_tabbar.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
