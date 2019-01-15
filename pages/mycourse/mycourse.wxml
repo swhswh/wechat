@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-panel__hd" style="margin:10px;color:#767676" >班级名称</view>
+  </view>
+
+
+  <view class="weui-flex" style="border-bottom:5px solid #eee;padding-bottom:15px"> 
+  <view class="weui-flex__item nav-view " bindtap='page2video'>
+      <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
+      <view class="placeholder" >成员</view>
+    </view>
+    <view class="weui-flex__item nav-view " bindtap='page2courseware'>
+      <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
+      <view class="placeholder" >直播</view>
+    </view>
+    <view class="weui-flex__item nav-view">
+      <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
+      <view class="placeholder">讨论区</view>
+    </view>
+  </view>
+
+  <view class="page__hd"style="padding:20px;padding-bottom:5px">
+      <view class="title">学习日志</view>
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <view class="weui-navbar__title">{{item}}</view>
+            </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}"></view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}"></view>
+    </view>
+              
+  </view>
+</view>

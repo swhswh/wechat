@@ -33,6 +33,11 @@ Page({
       }
     });
   },
+  tomycourse:function(){
+    wx.navigateTo({
+      url: '../mycourse/mycourse'
+    })
+  },
   mycoursemore: function () {
     wx.showActionSheet({
       itemList: ['反馈', '归档'],

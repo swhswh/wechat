@@ -30,8 +30,8 @@
             </view>
             <view class="weui-tab__panel">
                 <view hidden="{{activeIndex != 0}}">
-                  <view class="box-content">
-                    <view class="weui-flex">
+                  <view class="box-content" >
+                    <view class="weui-flex" >
                       <view class="weui-article__h1 weui-flex__item color-gray">课程名称</view>
                     </view>
                     <view class="weui-flex">
@@ -63,7 +63,7 @@
                 
                 <view hidden="{{activeIndex != 1}}">
                   <view class="box-content">
-                    <view class="weui-flex">
+                    <view class="weui-flex" bindtap='tomycourse'>
                       <view class="weui-article__h1 weui-flex__item color-gray">课程名称</view>
                     </view>
                     <view class="weui-flex">

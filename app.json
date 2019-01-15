@@ -4,7 +4,8 @@
     "pages/myinfo/myinfo",
     "pages/message/message",
     "pages/courseware/courseware",
-    "pages/collection/collection"
+    "pages/collection/collection",
+    "pages/mycourse/mycourse"
   ],
   "window":{
     "backgroundTextStyle":"light",
