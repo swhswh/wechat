@@ -18,7 +18,31 @@ Page({
       url: '../courseware/courseware'
     })
   },
-
+  page2collection: function () {
+    wx.navigateTo({
+      url: '../collection/collection'
+    })
+  },
+  myteachmore: function () {
+    wx.showActionSheet({
+      itemList: ['管理', '归档'],
+      success: function (res) {
+        if (!res.cancel) {
+          console.log(res.tapIndex)
+        }
+      }
+    });
+  },
+  mycoursemore: function () {
+    wx.showActionSheet({
+      itemList: ['反馈', '归档'],
+      success: function (res) {
+        if (!res.cancel) {
+          console.log(res.tapIndex)
+        }
+      }
+    });
+  },
   onLoad: function () {
     var that = this;
     wx.getSystemInfo({

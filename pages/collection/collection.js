@@ -1,36 +1,42 @@
 const app = getApp();
+var base64 = require("../../resources/images/base64");
+var sliderWidth = 96;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    resdate:0,
+    tabs: ["课件", "视频", "试题"],
+    activeIndex: 0,
+    sliderOffset: 0,
+    sliderLeft: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url:'https://www.cccqqf.top/teaIndex/calIndex?Date=2018-06-05&class=0',
-      data:{
-        calIndex: '2018-06-05',
-        class: 0
-
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      method:"POST",
-      dataType:"json",
-      success(res) {1
-        console.log(res.data);
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
       }
-
-    })
+    });
+    this.setData({
+      icon60: base64.icon60
+    });
   },
-
+  
+  tabClick: function (e) {
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

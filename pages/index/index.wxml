@@ -2,6 +2,10 @@
 <view class="container">
   <image class='top-image' src="../../resources/images/index.jpg" ></image>
   <view class="weui-flex">
+  <view class="weui-flex__item nav-view " bindtap='page2video'>
+      <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
+      <view class="placeholder" >视频库</view>
+    </view>
     <view class="weui-flex__item nav-view " bindtap='page2courseware'>
       <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
       <view class="placeholder" >课件库</view>
@@ -10,7 +14,7 @@
       <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
       <view class="placeholder">试题库</view>
     </view>
-    <view class="weui-flex__item nav-view">
+    <view class="weui-flex__item nav-view" bindtap='page2collection'>
       <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
       <view class="placeholder">收藏</view>
     </view>
@@ -34,16 +38,13 @@
                       <view class="weui-article__p weui-flex__item color-gray">班级名称</view>
                       <view class="weui-flex__item"></view>
                       <view class="weui-flex__item"></view>
-                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit'></image></view>
+                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit' bindtap='myteachmore'></image></view>
 
                     </view>
-                    
-                    
                     <text class="population">人数</text>
-                    </view>
                   </view>
 
-                  <view hidden="{{activeIndex != 0}}">
+
                   <view class="box-content">
                     <view class="weui-flex">
                       <view class="weui-article__h1 weui-flex__item color-gray">课程名称</view>
@@ -52,17 +53,15 @@
                       <view class="weui-article__p weui-flex__item color-gray">班级名称</view>
                       <view class="weui-flex__item"></view>
                       <view class="weui-flex__item"></view>
-                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit'></image></view>
-
+                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit' ></image></view>
                     </view>
-                    
-                    
                     <text class="population">人数</text>
-                    </view>
                   </view>
 
+                </view>
 
-                  <view hidden="{{activeIndex != 0}}">
+                
+                <view hidden="{{activeIndex != 1}}">
                   <view class="box-content">
                     <view class="weui-flex">
                       <view class="weui-article__h1 weui-flex__item color-gray">课程名称</view>
@@ -71,16 +70,26 @@
                       <view class="weui-article__p weui-flex__item color-gray">班级名称</view>
                       <view class="weui-flex__item"></view>
                       <view class="weui-flex__item"></view>
-                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit'></image></view>
+                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit' bindtap='mycoursemore'></image></view>
 
                     </view>
-                    
-                    
                     <text class="population">人数</text>
-                    </view>
                   </view>
 
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view class="box-content">
+                    <view class="weui-flex">
+                      <view class="weui-article__h1 weui-flex__item color-gray">课程名称</view>
+                    </view>
+                    <view class="weui-flex">
+                      <view class="weui-article__p weui-flex__item color-gray">班级名称</view>
+                      <view class="weui-flex__item"></view>
+                      <view class="weui-flex__item"></view>
+                      <view class="weui-flex__item"><image src="../../resources/images/icon_nav_nav.png" class='box-image' mode='aspectFit' bindtap='mycoursemore'></image></view>
+
+                    </view>
+                    <text class="population">人数</text>
+                  </view>
+
 
                 </view>
             </view>

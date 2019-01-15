@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/myinfo/myinfo",
     "pages/message/message",
-    "pages/courseware/courseware"
+    "pages/courseware/courseware",
+    "pages/collection/collection"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "sVIP",
+    "navigationBarTitleText": "助教菌",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
