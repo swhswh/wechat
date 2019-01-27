@@ -1,0 +1,3 @@
+.weui-media-box_text .weui-media-box__desc:last-child{
+  margin-top:10px;
+}

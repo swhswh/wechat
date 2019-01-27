@@ -5,7 +5,10 @@
     "pages/message/message",
     "pages/courseware/courseware",
     "pages/collection/collection",
-    "pages/mycourse/mycourse"
+    "pages/mycourse/mycourse",
+    "pages/video/video",
+    "pages/test/test",
+    "pages/memberlist/memberlist"
   ],
   "window":{
     "backgroundTextStyle":"light",

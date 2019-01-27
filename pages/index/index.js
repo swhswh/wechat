@@ -18,6 +18,16 @@ Page({
       url: '../courseware/courseware'
     })
   },
+  page2video: function () {
+    wx.navigateTo({
+      url: '../video/video'
+    })
+  },
+  page2test: function () {
+    wx.navigateTo({
+      url: '../test/test'
+    })
+  },
   page2collection: function () {
     wx.navigateTo({
       url: '../collection/collection'

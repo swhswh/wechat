@@ -1,30 +1,24 @@
 const app = getApp();
-var sliderWidth = 88;
+var base64 = require("../../resources/images/base64");
+var sliderWidth = 112;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabs: [ "视频","课件","试题","公告"],
+    tabs: ["我上传的", "我收到的"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
+    inputShowed: false,
+    inputVal: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-
-  page2memberlist:function(){
-    wx.navigateTo({
-      url: '../memberlist/memberlist',
-    })
-  },
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '课程名称'
-    });
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
@@ -34,7 +28,9 @@ Page({
         });
       }
     });
-
+    this.setData({
+      icon60: base64.icon60
+    });
   },
   tabClick: function (e) {
     this.setData({
@@ -42,52 +38,74 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
+
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })
