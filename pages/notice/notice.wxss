@@ -1,0 +1,4 @@
+.weui-flex{
+  color:#767676;
+  margin-bottom: 5px;
+}

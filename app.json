@@ -8,7 +8,10 @@
     "pages/mycourse/mycourse",
     "pages/video/video",
     "pages/test/test",
-    "pages/memberlist/memberlist"
+    "pages/memberlist/memberlist",
+    "pages/discussions/discussions",
+    "pages/discussion/discussion",
+    "pages/notice/notice"
   ],
   "window":{
     "backgroundTextStyle":"light",

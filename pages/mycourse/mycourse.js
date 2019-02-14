@@ -21,6 +21,11 @@ Page({
       url: '../memberlist/memberlist',
     })
   },
+  page2discussions: function () {
+    wx.navigateTo({
+      url: '../discussions/discussions',
+    })
+  },
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '课程名称'

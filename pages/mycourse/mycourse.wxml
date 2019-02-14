@@ -13,7 +13,7 @@
       <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
       <view class="placeholder" >直播</view>
     </view>
-    <view class="weui-flex__item nav-view">
+    <view class="weui-flex__item nav-view" bindtap='page2discussions'>
       <image src="../../resources/images/icon_tabbar.png" class='nav-image' mode='aspectFit'></image>
       <view class="placeholder">讨论区</view>
     </view>
@@ -63,7 +63,7 @@
         </navigator>
       </view>
       <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="../notice/notice" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__bd">公告名称</view>
             <view class="weui-cell__ft weui-cell__ft_in-access">2019-01-27</view>
         </navigator>
